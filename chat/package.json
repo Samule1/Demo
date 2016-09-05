@@ -1,0 +1,16 @@
+{
+  "name": "testchatapp",
+  "version": "1.0.0",
+  "description": "testing sockets",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hampus Carlsson",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "*",
+    "express": "*",
+    "es6-shim":"*"
+  }
+}
