@@ -8,6 +8,7 @@ connections = [];
 
 server.listen(process.env.PORT || 3000);
 console.log('Server running..');
+console.log('Listening on: '+ process.env.PORT);
 //Get requests??
 
 app.get('/', function(req, res){
