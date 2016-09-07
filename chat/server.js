@@ -11,7 +11,7 @@ console.log('Server running..');
 //Get requests??
 
 app.get('/', function(req, res){
-  res.sendFile('C:/Users/Hampus/Documents/chat/index.html');
+  res.sendFile( __dirname + '/index.html');
 });
 
 io.sockets.on('connection', (socket) => {
