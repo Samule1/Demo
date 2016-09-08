@@ -26,7 +26,7 @@ io.sockets.on('connection', (socket) => {
   socket.on('disconnect', (data)=>{
     connections.splice(connections.indexOf(socket),1);
     var data = {};
-    data.msg = 'En anslutning har lagts till!';
+    data.msg = 'En anslutning har kopplats bort!';
     io.sockets.emit('new message', data);
     console.log('Disconnected: %s sockets connected', connections.length);
   });
