@@ -17,11 +17,13 @@ app.get('/', function(req, res){
 
 io.sockets.on('connection', (socket) => {
   connections.push(socket);
+  io.sockets.emit('new message', 'En anslutning har lagts till!');
   console.log('Connected: %s sockets connected', connections.length);
 
   //Disconnect
   socket.on('disconnect', (data)=>{
     connections.splice(connections.indexOf(socket),1);
+    io.sockets.emit('new message', 'En anslutning kopplats bort!');
     console.log('Disconnected: %s sockets connected', connections.length);
   });
   //Send message
